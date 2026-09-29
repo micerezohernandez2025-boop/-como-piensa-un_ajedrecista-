@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Pensamiento ajedrecístico: descubre cómo evoluciona la forma de pensar según el nivel Elo y juega una partida.">
+
+    <title>Pensamiento Ajedrecístico</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Chess.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero" id="inicio">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                ♞ <span>Pensamiento</span> Ajedrecístico
+            </div>
+
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#niveles">Niveles</a>
+                <a href="#jugar">Jugar</a>
+                <a href="#comparacion">Pensamiento</a>
+                <a href="#autor">Autor</a>
+                <a href="#calificacion">Calificar</a>
+            </div>
+
+        </nav>
+
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    ♟ EL ARTE DE PENSAR
+                </p>
+
+                <h1>
+                    ¿Cómo piensa un
+                    <span>ajedrecista?</span>
+                </h1>
+
+                <p class="hero-description">
+                    El ajedrez no consiste solamente en mover piezas.
+                    A medida que aumenta el nivel Elo, también cambia
+                    la forma de analizar, calcular y comprender una posición.
+                </p>
+
+                <a href="#niveles" class="main-button">
+                    Explorar niveles ↓
+                </a>
+
+            </div>
+
+
+            <!-- TABLERO DECORATIVO -->
+
+            <div class="chess-container">
+
+                <div class="decorative-board">
+
+                    <!-- NEGRAS ARRIBA -->
+
+                    <div class="dark black-piece">♜</div>
+                    <div class="light black-piece">♞</div>
+                    <div class="dark black-piece">♝</div>
+                    <div class="light black-piece">♛</div>
+                    <div class="dark black-piece">♚</div>
+                    <div class="light black-piece">♝</div>
+                    <div class="dark black-piece">♞</div>
+                    <div class="light black-piece">♜</div>
+
+                    <div class="light black-piece">♟</div>
+                    <div class="dark black-piece">♟</div>
+                    <div class="light black-piece">♟</div>
+                    <div class="dark black-piece">♟</div>
+                    <div class="light black-piece">♟</div>
+                    <div class="dark black-piece">♟</div>
+                    <div class="light black-piece">♟</div>
+                    <div class="dark black-piece">♟</div>
+
+
+                    <!-- CENTRO -->
+
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                    <div class="light"></div>
+                    <div class="dark"></div>
+
+
+                    <!-- BLANCAS ABAJO -->
+
+                    <div class="dark white-piece">♙</div>
+                    <div class="light white-piece">♙</div>
+                    <div class="dark white-piece">♙</div>
+                    <div class="light white-piece">♙</div>
+                    <div class="dark white-piece">♙</div>
+                    <div class="light white-piece">♙</div>
+                    <div class="dark white-piece">♙</div>
+                    <div class="light white-piece">♙</div>
+
+                    <div class="light white-piece">♖</div>
+                    <div class="dark white-piece">♘</div>
+                    <div class="light white-piece">♗</div>
+                    <div class="dark white-piece">♕</div>
+                    <div class="light white-piece">♔</div>
+                    <div class="dark white-piece">♗</div>
+                    <div class="light white-piece">♘</div>
+                    <div class="dark white-piece">♖</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro">
+
+        <div class="section-title">
+
+            <p>LA EVOLUCIÓN DEL JUGADOR</p>
+
+            <h2>
+                De mover piezas a
+                <span>comprender posiciones</span>
+            </h2>
+
+        </div>
+
+        <p class="intro-text">
+            El Elo es una forma de medir la fuerza relativa de un jugador.
+            Pero detrás de cada número existe una evolución en la manera de
+            observar el tablero. Un jugador principiante puede concentrarse
+            en una pieza concreta, mientras que un jugador avanzado analiza
+            planes, variantes, estructuras y recursos defensivos.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         NIVELES
+    ========================== -->
+
+    <section class="levels" id="niveles">
+
+        <div class="section-title">
+
+            <p>ESCALA DE FUERZA</p>
+
+            <h2>
+                Niveles de ajedrez según el
+                <span>Elo</span>
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+            <article class="card beginner">
+
+                <div class="card-top">
+                    <span class="elo">1000 – 1399</span>
+                    <span class="icon">♟</span>
+                </div>
+
+                <h3>Principiante</h3>
+
+                <p class="question">
+                    “¿Puedo capturar esa pieza?”
+                </p>
+
+                <p>
+                    Conoce las reglas básicas, pero todavía puede cometer
+                    errores frecuentes como dejar piezas sin defensa.
+                </p>
+
+                <div class="thinking">
+                    <strong>Su pensamiento:</strong>
+                    <span>Capturas · Amenazas · Seguridad del rey</span>
+                </div>
+
+            </article>
+
+
+            <article class="card amateur">
+
+                <div class="card-top">
+                    <span class="elo">1400 – 1599</span>
+                    <span class="icon">♞</span>
+                </div>
+
+                <h3>Aficionado</h3>
+
+                <p class="question">
+                    “¿Qué amenaza mi rival?”
+                </p>
+
+                <p>
+                    Empieza a reconocer patrones tácticos y entiende mejor
+                    la importancia de desarrollar sus piezas.
+                </p>
+
+                <div class="thinking">
+                    <strong>Su pensamiento:</strong>
+                    <span>Táctica · Desarrollo · Amenazas</span>
+                </div>
+
+            </article>
+
+
+            <article class="card club">
+
+                <div class="card-top">
+                    <span class="elo">1600 – 1799</span>
+                    <span class="icon">♝</span>
+                </div>
+
+                <h3>Jugador de club medio</h3>
+
+                <p class="question">
+                    “¿Cuál es mi plan?”
+                </p>
+
+                <p>
+                    Comienza a comprender estructuras de peones, casillas
+                    importantes y planes estratégicos.
+                </p>
+
+                <div class="thinking">
+                    <strong>Su pensamiento:</strong>
+                    <span>Planes · Estrategia · Estructuras</span>
+                </div>
+
+            </article>
+
+
+            <article class="card strong">
+
+                <div class="card-top">
+                    <span class="elo">1800 – 1999</span>
+                    <span class="icon">♜</span>
+                </div>
+
+                <h3>Jugador de club fuerte</h3>
+
+                <p class="question">
+                    “¿Qué posición obtendré después?”
+                </p>
+
+                <p>
+                    Calcula variantes con mayor precisión y combina
+                    conceptos tácticos con comprensión posicional.
+                </p>
+
+                <div class="thinking">
+                    <strong>Su pensamiento:</strong>
+                    <span>Cálculo · Posición · Iniciativa</span>
+                </div>
+
+            </article>
+
+
+            <article class="card expert">
+
+                <div class="card-top">
+                    <span class="elo">2000 – 2199</span>
+                    <span class="icon">♛</span>
+                </div>
+
+                <h3>Experto / Candidato a Maestro</h3>
+
+                <p class="question">
+                    “¿Cuál es la continuación más precisa?”
+                </p>
+
+                <p>
+                    Analiza posiciones complejas, calcula variantes y
+                    busca recursos concretos.
+                </p>
+
+                <div class="thinking">
+                    <strong>Su pensamiento:</strong>
+                    <span>Precisión · Cálculo · Preparación</span>
+                </div>
+
+            </article>
+
+
+            <article class="card master">
+
+                <div class="card-top">
+                    <span class="elo">2200 – 2299</span>
+                    <span class="icon">♚</span>
+                </div>
+
+                <h3>Nivel de maestro</h3>
+
+                <p class="question">
+                    “¿Qué exige objetivamente la posición?”
+                </p>
+
+                <p>
+                    Combina cálculo preciso con una comprensión avanzada
+                    de la estrategia y la táctica.
+                </p>
+
+                <div class="thinking">
+                    <strong>Su pensamiento:</strong>
+                    <span>Evaluación · Cálculo · Técnica</span>
+                </div>
+
+            </article>
+
+
+            <article class="card grandmaster">
+
+                <div class="card-top">
+                    <span class="elo">2300+</span>
+                    <span class="icon">👑</span>
+                </div>
+
+                <h3>Gran Maestro</h3>
+
+                <p class="question">
+                    “¿Qué recursos tiene la posición?”
+                </p>
+
+                <p>
+                    Combina cálculo profundo, reconocimiento de patrones,
+                    preparación, experiencia y comprensión estratégica.
+                </p>
+
+                <div class="thinking">
+                    <strong>Su pensamiento:</strong>
+                    <span>Patrones · Cálculo · Estrategia</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         JUEGO
+    ========================== -->
+
+    <section class="game-section" id="jugar">
+
+        <div class="section-title">
+
+            <p>PON A PRUEBA TU PENSAMIENTO</p>
+
+            <h2>
+                Juega una partida de
+                <span>ajedrez</span>
+            </h2>
+
+            <p class="game-subtitle">
+                Tú juegas con blancas. La IA juega con negras.
+            </p>
+
+        </div>
+
+
+        <div class="game-wrapper">
+
+            <div class="game-board-container">
+
+                <div id="game-board" class="game-board"></div>
+
+            </div>
+
+
+            <div class="game-panel">
+
+                <div class="game-status">
+
+                    <span>PARTIDA</span>
+
+                    <h3 id="game-status">
+                        Tu turno
+                    </h3>
+
+                    <p id="thinking-status">
+                        Selecciona una pieza blanca.
+                    </p>
+
+                </div>
+
+
+                <label for="difficulty">
+                    Nivel de la IA
+                </label>
+
+                <select id="difficulty">
+
+                    <option value="6">
+                        Fácil
+                    </option>
+
+                    <option value="10" selected>
+                        Medio
+                    </option>
+
+                    <option value="14">
+                        Difícil
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    id="new-game"
+                    class="game-button">
+                    ♟ Nueva partida
+                </button>
+
+
+                <button
+                    type="button"
+                    id="undo-move"
+                    class="game-button secondary">
+                    ↩ Deshacer
+                </button>
+
+
+                <div class="move-history">
+
+                    <h3>
+                        Movimientos
+                    </h3>
+
+                    <ol id="move-list"></ol>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COMPARACIÓN
+    ========================== -->
+
+    <section class="comparison" id="comparacion">
+
+        <div class="section-title">
+
+            <p>TRES FORMAS DE PENSAR</p>
+
+            <h2>
+                Promedio, experto y
+                <span>Gran Maestro</span>
+            </h2>
+
+        </div>
+
+
+        <div class="comparison-grid">
+
+            <div class="comparison-box">
+
+                <div class="big-icon">♟</div>
+
+                <h3>Jugador promedio</h3>
+
+                <p>
+                    “¿Qué puedo hacer ahora?”
+                </p>
+
+                <ul>
+                    <li>Busca capturas.</li>
+                    <li>Detecta amenazas inmediatas.</li>
+                    <li>Calcula pocas variantes.</li>
+                    <li>Puede pasar por alto recursos defensivos.</li>
+                </ul>
+
+            </div>
+
+
+            <div class="comparison-box highlighted">
+
+                <div class="big-icon">♞</div>
+
+                <h3>Jugador experto</h3>
+
+                <p>
+                    “¿Qué plan me da mejores posibilidades?”
+                </p>
+
+                <ul>
+                    <li>Compara diferentes candidatos.</li>
+                    <li>Calcula variantes concretas.</li>
+                    <li>Evalúa estructuras de peones.</li>
+                    <li>Busca planes a medio plazo.</li>
+                </ul>
+
+            </div>
+
+
+            <div class="comparison-box">
+
+                <div class="big-icon">♚</div>
+
+                <h3>Gran Maestro</h3>
+
+                <p>
+                    “¿Cuál es la esencia de esta posición?”
+                </p>
+
+                <ul>
+                    <li>Reconoce patrones rápidamente.</li>
+                    <li>Calcula variantes críticas.</li>
+                    <li>Evalúa recursos tácticos y estratégicos.</li>
+                    <li>Encuentra planes extremadamente precisos.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FRASE
+    ========================== -->
+
+    <section class="quote">
+
+        <div>
+
+            <span>♜</span>
+
+            <h2>
+                “La fuerza de un ajedrecista no está solamente
+                en saber qué mover, sino en comprender
+                <em>por qué</em>.”
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AUTOR
+    ========================== -->
+
+    <section class="author-section" id="autor">
+
+        <div class="author-card">
+
+            <div class="author-piece">
+                ♞
+            </div>
+
+
+            <div class="author-content">
+
+                <p class="author-label">
+                    SOBRE EL AUTOR
+                </p>
+
+                <h2>
+                    ¿Quién escribe esta página?
+                </h2>
+
+                <p>
+                    Quien escribe esta página es
+                    <strong>Miguel Ivan Cerezo Hernandez</strong>,
+                    actual campeón del CETIS 3.
+                </p>
+
+                <p>
+                    He ganado un estatal en la Ciudad de México
+                    y conseguí un trofeo para la escuela.
+                </p>
+
+                <p>
+                    Y ahora puede que me esté enajenando en mi
+                    teléfono o jugando Roblox con mis amigos diciendo:
+                </p>
+
+                <div class="roblox-quote">
+                    “Eh, vato, ey”
+                </div>
+
+                <p>
+                    Pero ahora estoy aquí programando esta página
+                    porque me gustaría compartir algo que me gusta:
+                    el ajedrez y la forma en que pensamos cuando jugamos.
+                </p>
+
+                <p>
+                    Así que, Mau o Gordo...
+                </p>
+
+                <div class="question-box">
+
+                    <span>♟</span>
+
+                    <strong>
+                        ¿Qué opinas de mi páginaaaaaa?
+                    </strong>
+
+                    <small>
+                        1/10?????
+                    </small>
+
+                </div>
+
+                <p class="final-joke">
+                    Y sí, ya sé, me abandonaron mmiis padres...
+                    pero al menos mi mamá no me endeudó machiiiiin :D
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALIFICACIÓN
+    ========================== -->
+
+    <section class="rating-section" id="calificacion">
+
+        <div class="section-title">
+
+            <p>AHORA TE TOCA A TI</p>
+
+            <h2>
+                ¿Qué opinas de mi
+                <span>página?</span>
+            </h2>
+
+            <p class="rating-description">
+                Califica esta página del 1 al 10.
+            </p>
+
+        </div>
+
+
+        <div class="rating-card">
+
+            <div class="rating-number" id="rating-number">
+                —
+            </div>
+
+            <p>
+                Selecciona una calificación:
+            </p>
+
+
+            <div class="rating-buttons">
+
+                <button data-rating="1">1</button>
+                <button data-rating="2">2</button>
+                <button data-rating="3">3</button>
+                <button data-rating="4">4</button>
+                <button data-rating="5">5</button>
+                <button data-rating="6">6</button>
+                <button data-rating="7">7</button>
+                <button data-rating="8">8</button>
+                <button data-rating="9">9</button>
+                <button data-rating="10">10</button>
+
+            </div>
+
+
+            <div
+                class="rating-message"
+                id="rating-message">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONCLUSIÓN
+    ========================== -->
+
+    <section class="conclusion">
+
+        <div class="section-title">
+
+            <p>EN RESUMEN</p>
+
+            <h2>
+                El tablero cambia cuando
+                <span>cambia tu forma de pensar</span>
+            </h2>
+
+        </div>
+
+        <p>
+            El progreso en ajedrez no consiste únicamente en aumentar
+            el Elo. También implica aprender a observar más información,
+            calcular con mayor precisión, reconocer patrones y construir
+            planes.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ♞ Pensamiento Ajedrecístico
+        </div>
+
+        <p>
+            Una exploración de la evolución del pensamiento en el ajedrez.
+        </p>
+
+        <small>
+            Los rangos de Elo son aproximados y no equivalen automáticamente
+            a títulos oficiales.
+        </small>
+
+    </footer>
+
+
+    <!-- Stockfish -->
+
+    <script src="https://cdn.jsdelivr.net/npm/stockfish.js@10.0.2/stockfish.min.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
